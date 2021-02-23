@@ -11,7 +11,6 @@
         <!--Item-->
         <scene sceneID="V6F-Do-C9d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bvF-2z-zdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="1" modalPresentationStyle="fullScreen" id="N4B-Sj-236" customClass="libraryCards" customModule="MagicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JAN-1j-bjH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -74,6 +73,7 @@
                         <segue destination="aXa-eT-wgc" kind="show" identifier="infoSegue" id="vqU-Sa-9Wu"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvF-2z-zdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-249.27536231884059" y="79.6875"/>
         </scene>
