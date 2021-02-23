@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0250FE0A25E57D220016E4EB /* LibraryCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0250FE0925E57D220016E4EB /* LibraryCards.storyboard */; };
+		0250FE0F25E57D370016E4EB /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE0E25E57D370016E4EB /* CollectionCell.swift */; };
+		0250FE1425E57D440016E4EB /* LibraryCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE1325E57D440016E4EB /* LibraryCards.swift */; };
+		0250FE1925E581EA0016E4EB /* CardInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0250FE1825E581EA0016E4EB /* CardInfo.storyboard */; };
+		0250FE1E25E585100016E4EB /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE1D25E585100016E4EB /* CardInfo.swift */; };
+		0250FE2C25E592570016E4EB /* FavoriteCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0250FE2B25E592570016E4EB /* FavoriteCards.storyboard */; };
+		0250FE3A25E593DA0016E4EB /* FavoriteCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE3925E593DA0016E4EB /* FavoriteCards.swift */; };
 		02DD812525E43EE1006995CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD812425E43EE1006995CA /* AppDelegate.swift */; };
 		02DD812725E43EE1006995CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD812625E43EE1006995CA /* SceneDelegate.swift */; };
 		02DD812925E43EE1006995CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD812825E43EE1006995CA /* ViewController.swift */; };
@@ -36,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0250FE0925E57D220016E4EB /* LibraryCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LibraryCards.storyboard; sourceTree = "<group>"; };
+		0250FE0E25E57D370016E4EB /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		0250FE1325E57D440016E4EB /* LibraryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCards.swift; sourceTree = "<group>"; };
+		0250FE1825E581EA0016E4EB /* CardInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardInfo.storyboard; sourceTree = "<group>"; };
+		0250FE1D25E585100016E4EB /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
+		0250FE2B25E592570016E4EB /* FavoriteCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteCards.storyboard; sourceTree = "<group>"; };
+		0250FE3925E593DA0016E4EB /* FavoriteCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCards.swift; sourceTree = "<group>"; };
 		02DD812125E43EE1006995CA /* MagicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DD812425E43EE1006995CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DD812625E43EE1006995CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,9 +92,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0250FE0725E57CD40016E4EB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0250FE0E25E57D370016E4EB /* CollectionCell.swift */,
+				0250FE1325E57D440016E4EB /* LibraryCards.swift */,
+				0250FE1D25E585100016E4EB /* CardInfo.swift */,
+				0250FE3925E593DA0016E4EB /* FavoriteCards.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0250FE0825E57CDF0016E4EB /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0250FE0925E57D220016E4EB /* LibraryCards.storyboard */,
+				0250FE1825E581EA0016E4EB /* CardInfo.storyboard */,
+				0250FE2B25E592570016E4EB /* FavoriteCards.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		02DD811825E43EE0006995CA = {
 			isa = PBXGroup;
 			children = (
+				0250FE0825E57CDF0016E4EB /* Storyboard */,
+				0250FE0725E57CD40016E4EB /* Source */,
 				02DD812325E43EE1006995CA /* MagicApp */,
 				02DD813D25E43EE1006995CA /* MagicAppTests */,
 				02DD814825E43EE2006995CA /* MagicAppUITests */,
@@ -234,8 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0250FE2C25E592570016E4EB /* FavoriteCards.storyboard in Resources */,
 				02DD813425E43EE1006995CA /* LaunchScreen.storyboard in Resources */,
 				02DD813125E43EE1006995CA /* Assets.xcassets in Resources */,
+				0250FE1925E581EA0016E4EB /* CardInfo.storyboard in Resources */,
+				0250FE0A25E57D220016E4EB /* LibraryCards.storyboard in Resources */,
 				02DD812C25E43EE1006995CA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DD812925E43EE1006995CA /* ViewController.swift in Sources */,
+				0250FE1425E57D440016E4EB /* LibraryCards.swift in Sources */,
 				02DD812525E43EE1006995CA /* AppDelegate.swift in Sources */,
+				0250FE3A25E593DA0016E4EB /* FavoriteCards.swift in Sources */,
 				02DD812725E43EE1006995CA /* SceneDelegate.swift in Sources */,
 				02DD812F25E43EE1006995CA /* MagicApp.xcdatamodeld in Sources */,
+				0250FE0F25E57D370016E4EB /* CollectionCell.swift in Sources */,
+				0250FE1E25E585100016E4EB /* CardInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = exampleProject.MagicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = exampleProject.MagicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
