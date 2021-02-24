@@ -114,6 +114,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBAction func bttLimpar(_ sender: Any) {
         txtName.text = ""
+        getCards()
     }
     
     
