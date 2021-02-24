@@ -16,9 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FdI-aj-5li">
-                                <rect key="frame" x="20" y="182" width="374" height="579"/>
-                                <color key="backgroundColor" red="0.18421754239999999" green="0.16863077879999999" blue="0.1686274707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cartafundo_Prancheta 1" translatesAutoresizingMaskIntoConstraints="NO" id="2gp-t8-AGs">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqk-wa-IpJ">
+                                <rect key="frame" x="367" y="122" width="20" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.61195892100000004" green="0.61126893760000001" blue="0.63922023770000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-n5-duK">
+                                <rect key="frame" x="20" y="116" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.15302422639999999" green="0.15272820000000001" blue="0.1647076905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FdI-aj-5li">
+                                <rect key="frame" x="20" y="182" width="374" height="680"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q9K-70-KSK">
                                     <size key="itemSize" width="170" height="281"/>
                                     <size key="estimatedItemSize" width="170" height="281"/>
@@ -56,15 +74,23 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9Y-DX-Czh">
+                                <rect key="frame" x="304" y="74" width="90" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <color key="textColor" red="0.65883260970000002" green="0.65880727770000003" blue="0.65882444380000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Magic Cards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnc-eW-Nvy">
+                                <rect key="frame" x="21" y="66" width="206" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8F0-wl-91r"/>
                         <color key="backgroundColor" red="0.1803199053" green="0.1686286032" blue="0.1686275005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="FdI-aj-5li" firstAttribute="leading" secondItem="JAN-1j-bjH" secondAttribute="leadingMargin" id="0tT-R7-aKq"/>
-                            <constraint firstItem="FdI-aj-5li" firstAttribute="top" secondItem="8F0-wl-91r" secondAttribute="top" constant="138" id="HIW-lU-vEd"/>
-                            <constraint firstItem="8F0-wl-91r" firstAttribute="bottom" secondItem="FdI-aj-5li" secondAttribute="bottom" constant="101" id="JU0-6J-k6Q"/>
-                            <constraint firstItem="FdI-aj-5li" firstAttribute="trailing" secondItem="JAN-1j-bjH" secondAttribute="trailingMargin" id="pFo-Gc-V6W"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="7yB-3l-De7"/>
                     <navigationItem key="navigationItem" id="UGA-JY-fnf"/>
@@ -88,4 +114,8 @@
             <point key="canvasLocation" x="169" y="496"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cartafundo_Prancheta 1" width="428" height="245"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
