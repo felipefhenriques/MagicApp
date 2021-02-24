@@ -11,6 +11,7 @@ import UIKit
 class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var cardsView: UICollectionView!
+    @IBOutlet weak var backgroundPattern: UIImageView!
     var library = Cards()
     var response = HTTPURLResponse()
     
@@ -20,6 +21,9 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         getCards()
         cardsView.delegate = self
         cardsView.dataSource = self
+        cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
