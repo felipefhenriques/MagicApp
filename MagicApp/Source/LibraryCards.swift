@@ -12,9 +12,11 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var cardsView: UICollectionView!
     var library = Cards()
+    var response = HTTPURLResponse()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         getCards()
         cardsView.delegate = self
         cardsView.dataSource = self
@@ -30,7 +32,10 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cardsView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! customCell
+        
         cell.lblName.text = library.cards?[indexPath.item].name
+        
+        
         if library.cards?[indexPath.item].imageUrl != nil {
             cell.imgCard.load(url: URL(string: (library.cards?[indexPath.item].imageUrl)!)!)
         }
@@ -45,11 +50,6 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     func getCards(){
         var request = URLRequest(url: URL(string: "https://api.magicthegathering.io/v1/cards")!)
-//        request.setValue("2", forHTTPHeaderField: "Page-Size")
-//        request.setValue("2", forHTTPHeaderField: "Count")
-//        request.setValue("31090", forHTTPHeaderField: "Total-Count")
-//        request.setValue("5000", forHTTPHeaderField: "Ratelimit-Limit")
-//        request.setValue("4999", forHTTPHeaderField: "Ratelimit-Remaining")
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
@@ -57,6 +57,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
             
             do {
                 self.library = try JSONDecoder().decode(Cards.self, from: data)
+                self.response = response as! HTTPURLResponse
                 DispatchQueue.main.async {
                     self.cardsView.reloadData()
                 }
