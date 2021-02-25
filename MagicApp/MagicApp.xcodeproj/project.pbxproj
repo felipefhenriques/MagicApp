@@ -12,8 +12,8 @@
 		0250FE1425E57D440016E4EB /* LibraryCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE1325E57D440016E4EB /* LibraryCards.swift */; };
 		0250FE1925E581EA0016E4EB /* CardInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0250FE1825E581EA0016E4EB /* CardInfo.storyboard */; };
 		0250FE1E25E585100016E4EB /* CardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE1D25E585100016E4EB /* CardInfo.swift */; };
-		0250FE2C25E592570016E4EB /* FavoriteCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0250FE2B25E592570016E4EB /* FavoriteCards.storyboard */; };
-		0250FE3A25E593DA0016E4EB /* FavoriteCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE3925E593DA0016E4EB /* FavoriteCards.swift */; };
+		0250FE2C25E592570016E4EB /* BookmarkCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0250FE2B25E592570016E4EB /* BookmarkCards.storyboard */; };
+		0250FE3A25E593DA0016E4EB /* BookmarkCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250FE3925E593DA0016E4EB /* BookmarkCards.swift */; };
 		02DD812525E43EE1006995CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD812425E43EE1006995CA /* AppDelegate.swift */; };
 		02DD812725E43EE1006995CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD812625E43EE1006995CA /* SceneDelegate.swift */; };
 		02DD812925E43EE1006995CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD812825E43EE1006995CA /* ViewController.swift */; };
@@ -49,8 +49,8 @@
 		0250FE1325E57D440016E4EB /* LibraryCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCards.swift; sourceTree = "<group>"; };
 		0250FE1825E581EA0016E4EB /* CardInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardInfo.storyboard; sourceTree = "<group>"; };
 		0250FE1D25E585100016E4EB /* CardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfo.swift; sourceTree = "<group>"; };
-		0250FE2B25E592570016E4EB /* FavoriteCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteCards.storyboard; sourceTree = "<group>"; };
-		0250FE3925E593DA0016E4EB /* FavoriteCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCards.swift; sourceTree = "<group>"; };
+		0250FE2B25E592570016E4EB /* BookmarkCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarkCards.storyboard; sourceTree = "<group>"; };
+		0250FE3925E593DA0016E4EB /* BookmarkCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCards.swift; sourceTree = "<group>"; };
 		02DD812125E43EE1006995CA /* MagicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DD812425E43EE1006995CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DD812625E43EE1006995CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				0250FE0E25E57D370016E4EB /* CollectionCell.swift */,
 				0250FE1325E57D440016E4EB /* LibraryCards.swift */,
 				0250FE1D25E585100016E4EB /* CardInfo.swift */,
-				0250FE3925E593DA0016E4EB /* FavoriteCards.swift */,
+				0250FE3925E593DA0016E4EB /* BookmarkCards.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 			children = (
 				0250FE0925E57D220016E4EB /* LibraryCards.storyboard */,
 				0250FE1825E581EA0016E4EB /* CardInfo.storyboard */,
-				0250FE2B25E592570016E4EB /* FavoriteCards.storyboard */,
+				0250FE2B25E592570016E4EB /* BookmarkCards.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0250FE2C25E592570016E4EB /* FavoriteCards.storyboard in Resources */,
+				0250FE2C25E592570016E4EB /* BookmarkCards.storyboard in Resources */,
 				02DD813425E43EE1006995CA /* LaunchScreen.storyboard in Resources */,
 				02DD813125E43EE1006995CA /* Assets.xcassets in Resources */,
 				0250FE1925E581EA0016E4EB /* CardInfo.storyboard in Resources */,
@@ -307,7 +307,7 @@
 				02DD812925E43EE1006995CA /* ViewController.swift in Sources */,
 				0250FE1425E57D440016E4EB /* LibraryCards.swift in Sources */,
 				02DD812525E43EE1006995CA /* AppDelegate.swift in Sources */,
-				0250FE3A25E593DA0016E4EB /* FavoriteCards.swift in Sources */,
+				0250FE3A25E593DA0016E4EB /* BookmarkCards.swift in Sources */,
 				02DD812725E43EE1006995CA /* SceneDelegate.swift in Sources */,
 				02DD812F25E43EE1006995CA /* MagicApp.xcdatamodeld in Sources */,
 				0250FE0F25E57D370016E4EB /* CollectionCell.swift in Sources */,
@@ -489,6 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UF373B4HU9;
 				INFOPLIST_FILE = MagicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,6 +508,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UF373B4HU9;
 				INFOPLIST_FILE = MagicApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
