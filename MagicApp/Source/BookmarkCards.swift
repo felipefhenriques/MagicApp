@@ -10,7 +10,7 @@ import UIKit
 
 class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate{
     
-    @IBOutlet weak var txtSearch: UITextField!
+    @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var cardsView: UICollectionView!
     
     override func viewDidLoad() {
@@ -20,6 +20,11 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         
         //Visual
         cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        
+        if let button = txtName.value(forKey: "clearButton") as? UIButton {
+                  button.tintColor = .white
+                  button.setImage(UIImage(systemName: "xmark.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                }
     }
     
     // MARK: Status bar

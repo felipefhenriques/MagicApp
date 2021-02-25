@@ -28,6 +28,11 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         //Visual
         cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         
+        if let button = txtName.value(forKey: "clearButton") as? UIButton {
+                  button.tintColor = .white
+                  button.setImage(UIImage(systemName: "xmark.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
+                }
+        
         //Functionalities
         txtName.delegate = self
         

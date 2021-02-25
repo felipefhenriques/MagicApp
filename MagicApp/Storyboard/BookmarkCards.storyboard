@@ -120,8 +120,7 @@
                     <navigationItem key="navigationItem" id="SWf-Ci-fMo"/>
                     <connections>
                         <outlet property="cardsView" destination="HY0-rT-Gn7" id="wZQ-mf-e4x"/>
-                        <outlet property="txtName" destination="Ds2-LZ-8Dd" id="hLs-Zj-hIJ"/>
-                        <outlet property="txtSearch" destination="Ds2-LZ-8Dd" id="xT8-Ry-RsP"/>
+                        <outlet property="txtName" destination="Ds2-LZ-8Dd" id="ROJ-w2-esB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPh-qr-Gvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
