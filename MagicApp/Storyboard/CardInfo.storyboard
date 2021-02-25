@@ -178,7 +178,7 @@
                                             <constraint firstAttribute="trailing" secondItem="GAm-fY-J2J" secondAttribute="trailing" constant="60" id="KLA-ag-M5i"/>
                                             <constraint firstItem="Sj5-cV-CGe" firstAttribute="top" secondItem="f1e-qZ-wrV" secondAttribute="top" constant="42" id="Lj1-iN-MS3"/>
                                             <constraint firstItem="GAm-fY-J2J" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="60" id="LtV-1V-lOM"/>
-                                            <constraint firstItem="Sj5-cV-CGe" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" priority="500" constant="342" id="Ly6-4R-cX0"/>
+                                            <constraint firstItem="Sj5-cV-CGe" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" priority="500" constant="1042" id="Ly6-4R-cX0"/>
                                             <constraint firstItem="vQu-Y9-DJy" firstAttribute="top" secondItem="GAm-fY-J2J" secondAttribute="bottom" constant="20" id="MEt-aG-2Ck"/>
                                             <constraint firstItem="Tu7-CM-gHo" firstAttribute="top" secondItem="f1e-qZ-wrV" secondAttribute="top" constant="91" id="Pya-E4-feH"/>
                                             <constraint firstItem="GAm-fY-J2J" firstAttribute="leading" secondItem="bsV-lC-m1q" secondAttribute="trailing" priority="500" constant="10" id="SGO-p9-0DE"/>
@@ -198,6 +198,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.23910778760000001" green="0.22353476289999999" blue="0.22352930900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="f1e-qZ-wrV" firstAttribute="top" secondItem="Iiv-JD-hG9" secondAttribute="top" id="4Dc-jo-avJ"/>
                                     <constraint firstItem="f1e-qZ-wrV" firstAttribute="leading" secondItem="Iiv-JD-hG9" secondAttribute="leading" id="CjZ-2y-ZPb"/>
