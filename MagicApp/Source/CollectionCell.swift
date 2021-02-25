@@ -14,7 +14,7 @@ class customCell: UICollectionViewCell{
     
     override func layoutSubviews() {
         self.layer.cornerRadius = 15
-        imgCard.layer.cornerRadius = 15
+        imgCard.layer.cornerRadius = 12
     }
     
     override func prepareForReuse() {
