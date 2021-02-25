@@ -10,10 +10,10 @@
         <scene sceneID="xpH-j8-PSe">
             <objects>
                 <tabBarController modalPresentationStyle="fullScreen" id="bnL-ry-oWC" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O7U-DC-aLp">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="O7U-DC-aLp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1803199053" green="0.1686286032" blue="0.1686275005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Mai-K1-nYh" kind="relationship" relationship="viewControllers" id="sBS-Qc-aUC"/>
@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="-549" y="15"/>
         </scene>
-        <!--FavoriteCards-->
+        <!--BookmarkCards-->
         <scene sceneID="zVC-1p-PHh">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="2" storyboardName="FavoriteCards" id="aBl-am-ue7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="2" storyboardName="BookmarkCards" id="aBl-am-ue7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Hed-jE-5fG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pU9-PP-YeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
