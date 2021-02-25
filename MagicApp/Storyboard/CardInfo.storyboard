@@ -218,6 +218,9 @@
                             <constraint firstAttribute="bottom" secondItem="Iiv-JD-hG9" secondAttribute="bottom" id="yWq-Gp-JnS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblName" destination="Tu7-CM-gHo" id="yZu-M4-rhb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsI-z0-U59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,6 +13,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var cardsView: UICollectionView!
     @IBOutlet weak var txtName: UITextField!
     var library = Cards()
+    var cardsVersion = [Card()]
     var response = HTTPURLResponse()
     
     override func viewDidLoad() {
@@ -39,6 +40,15 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         return .lightContent
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "infoSegue"{
+            
+            let cardInfo:cardInfo = segue.destination as! cardInfo
+            cardInfo.cardsVersion = self.cardsVersion
+            cardInfo.indexCard = self.cardsVersion.firstIndex(where: {$0.id == self.library.cards![sender as! Int].id})
+        }
+    }
+    
     // MARK: Collection View
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return library.cards?.count ?? 0
@@ -57,8 +67,8 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("click")
-        performSegue(withIdentifier: "infoSegue", sender: nil)
+        getCardByVersion(name: self.library.cards![indexPath.item].name!, indexPath: indexPath.item)
+        
     }
     
     
@@ -102,6 +112,26 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
             print("Failed to load: \(error.localizedDescription)")
         }
     }.resume()
+    }
+    
+    func getCardByVersion(name: String, indexPath: Int){
+        var request = URLRequest(url: URL(string: "https://api.magicthegathering.io/v1/cards?name=%22\(name)%22")!)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            
+            guard let data = data else { return }
+            
+            do {
+                var cards = try JSONDecoder().decode(Cards.self, from: data)
+                self.cardsVersion = cards.cards!
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "infoSegue", sender: indexPath)
+                }
+            } catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+            }
+        }.resume()
     }
     
     // MARK: Keyboard related
