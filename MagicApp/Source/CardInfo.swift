@@ -11,9 +11,15 @@ import UIKit
 class cardInfo: UIViewController{
     
     @IBOutlet weak var btnExit: UIButton!
-    
+    @IBOutlet weak var lblName: UILabel!
+    var cardsVersion = [Card()]
+    var indexCard:Int!
     override func viewDidLoad() {
-        
+        lblName.text = cardsVersion[indexCard].name
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
