@@ -84,7 +84,14 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func getCardByName(name: String){
-        var request = URLRequest(url: URL(string: "https://api.magicthegathering.io/v1/cards?name=\(name)")!)
+        
+        let urlName = "https://api.magicthegathering.io/v1/cards?name=\(name)"
+        
+        // Allowing spaces
+        let urlValidString = urlName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        // Making request with the allowed characters
+        var request = URLRequest(url: URL(string: urlValidString!)!)
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
