@@ -34,10 +34,10 @@
             </objects>
             <point key="canvasLocation" x="-549" y="15"/>
         </scene>
-        <!--BookmarkCards-->
+        <!--FavoriteCards-->
         <scene sceneID="zVC-1p-PHh">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="2" storyboardName="BookmarkCards" id="aBl-am-ue7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="2" storyboardName="FavoriteCards" id="aBl-am-ue7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Hed-jE-5fG"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pU9-PP-YeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
