@@ -51,8 +51,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         if segue.identifier == "infoSegue"{
             
             let cardInfo:cardInfo = segue.destination as! cardInfo
-            cardInfo.cardsVersion = self.cardsVersion
-            cardInfo.indexCard = self.cardsVersion.firstIndex(where: {$0.id == self.library.cards![sender as! Int].id})
+            cardInfo.firstCard = self.library.cards![sender as! Int]
         }
     }
     
@@ -75,8 +74,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        getCardByVersion(name: self.library.cards![indexPath.item].name!, indexPath: indexPath.item)
-        
+        self.performSegue(withIdentifier: "infoSegue", sender: indexPath.item)
     }
     
     
@@ -132,30 +130,6 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     }.resume()
     }
     
-    func getCardByVersion(name: String, indexPath: Int){
-        
-        let urlName = "https://api.magicthegathering.io/v1/cards?name=\(name)"
-        
-        let urlValidString = urlName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        
-        var request = URLRequest(url: URL(string: urlValidString!)!)
-        request.httpMethod = "GET"
-        
-        URLSession.shared.dataTask(with: request) {(data, response, error) in
-            
-            guard let data = data else { return }
-            
-            do {
-                let cards = try JSONDecoder().decode(Cards.self, from: data)
-                self.cardsVersion = cards.cards!
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "infoSegue", sender: indexPath)
-                }
-            } catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
-            }
-        }.resume()
-    }
     
     // MARK: Keyboard related
     

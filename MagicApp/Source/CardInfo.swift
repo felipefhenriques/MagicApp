@@ -10,14 +10,43 @@ import UIKit
 import CoreData
 
 class cardInfo: UIViewController{
-    var managedObjContext: NSManagedObjectContext!
+    
+    //MARK: BTNs
     @IBOutlet weak var btnExit: UIButton!
     @IBOutlet weak var btnSave: UIButton!
+    @IBOutlet weak var btnPrev: UIButton!
+    @IBOutlet weak var btnNext: UIButton!
+    
+    //MARK: LBLs
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblVersion: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    
+    //MARK: IMG
+    @IBOutlet weak var imgCard: UIImageView!
+    
+    //MARK: TableView
+    @IBOutlet weak var tbvwDetails: UITableView!
+    
+    //MARK: Scroll
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    //MARK: ActIndicator
+    @IBOutlet weak var actIndicator: UIActivityIndicatorView!
+    
+    //MARK: VARs
+    var managedObjContext: NSManagedObjectContext!
     var cardsVersion = [Card()]
     var indexCard:Int!
+    var firstCard = Card()
+    
+    
+    
     override func viewDidLoad() {
-        lblName.text = cardsVersion[indexCard].name
+        scrollView.isHidden = true
+        actIndicator.startAnimating()
+        getCardByVersion(name: firstCard.name!)
+        
 
         //Necessario para o NSManagedObjectContext não retornar nil
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -84,9 +113,14 @@ class cardInfo: UIViewController{
             print("Não foi possível carregar os dados. \(error), \(error.userInfo)")
             }
         
-        for i in 0...cards.count-1{
-            print(cards[i].value(forKey: "name"))
+        if cards.count > 0 {
+            for i in 0...cards.count-1{
+                print(cards[i].value(forKey: "name"))
+            }
         }
+        
+        
+        loadItems()
     }
     
     func deleteData(){
@@ -105,7 +139,45 @@ class cardInfo: UIViewController{
         }
     }
     
+    func getCardByVersion(name: String){
+        
+        let urlName = "https://api.magicthegathering.io/v1/cards?name=\(name)"
+        
+        let urlValidString = urlName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        var request = URLRequest(url: URL(string: urlValidString!)!)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            
+            guard let data = data else { return }
+            
+            do {
+                let cards = try JSONDecoder().decode(Cards.self, from: data)
+                self.cardsVersion = cards.cards!
+                DispatchQueue.main.async { [self] in
+                    self.indexCard = self.cardsVersion.firstIndex(where: {$0.id == self.firstCard.id})
+                    lblName.text = self.cardsVersion[indexCard].name
+                    readEntries(entity: "CardEntity")
+                }
+            } catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+            }
+        }.resume()
+    }
+    
+    func loadItems(){
+        lblName.text = cardsVersion[indexCard].name
+        lblVersion.text = "\(cardsVersion[indexCard].set ?? "") - \(cardsVersion[indexCard].setName ?? "")"
+        if cardsVersion[indexCard].imageUrl != nil {
+            self.imgCard.load(url: URL(string: cardsVersion[indexCard].imageUrl!)!)
+        }
+        
+        lblDescription.text = cardsVersion[indexCard].text
+        actIndicator.stopAnimating()
+        scrollView.isHidden = false
+    }
+    
     
 }
-
 

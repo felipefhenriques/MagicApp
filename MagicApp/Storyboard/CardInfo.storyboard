@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="t58-9a-lo6">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iiv-JD-hG9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
@@ -235,8 +240,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="actIndicator" destination="t58-9a-lo6" id="ZE5-fc-4v6"/>
+                        <outlet property="btnNext" destination="ct9-Fc-eAU" id="JoE-kJ-BGI"/>
+                        <outlet property="btnPrev" destination="bsV-lC-m1q" id="JXC-mm-9Hg"/>
                         <outlet property="btnSave" destination="Dgw-UC-GXf" id="k2e-dZ-wuS"/>
+                        <outlet property="imgCard" destination="GAm-fY-J2J" id="Udo-qK-lzf"/>
+                        <outlet property="lblDescription" destination="0XN-MB-V6p" id="6z0-Ib-vvV"/>
                         <outlet property="lblName" destination="Tu7-CM-gHo" id="yZu-M4-rhb"/>
+                        <outlet property="lblVersion" destination="vQu-Y9-DJy" id="Erm-de-2BN"/>
+                        <outlet property="scrollView" destination="Iiv-JD-hG9" id="0U5-7x-6gO"/>
+                        <outlet property="tbvwDetails" destination="udp-75-Hg1" id="8R2-on-e7r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SsI-z0-U59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
