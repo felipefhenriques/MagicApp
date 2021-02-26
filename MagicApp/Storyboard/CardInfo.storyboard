@@ -135,7 +135,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="75" scale="medium" weight="regular"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="exitAction:" destination="sR0-T4-k0X" eventType="touchUpInside" id="PzN-y4-oLi"/>
+                                                    <action selector="saveCard:" destination="sR0-T4-k0X" eventType="touchUpInside" id="ZP4-C7-44I"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opo-lP-WUC">
@@ -163,6 +163,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-oG-wmW">
+                                                <rect key="frame" x="95" y="1216" width="57" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Imprimir"/>
+                                                <connections>
+                                                    <action selector="printarCarta:" destination="sR0-T4-k0X" eventType="touchUpInside" id="uUN-MG-u04"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-lY-hKb">
+                                                <rect key="frame" x="280" y="1216" width="50" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Apagar"/>
+                                                <connections>
+                                                    <action selector="apagarEntradas:" destination="sR0-T4-k0X" eventType="touchUpInside" id="AzJ-21-t90"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1803921568627451" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -219,6 +235,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSave" destination="Dgw-UC-GXf" id="k2e-dZ-wuS"/>
                         <outlet property="lblName" destination="Tu7-CM-gHo" id="yZu-M4-rhb"/>
                     </connections>
                 </viewController>
