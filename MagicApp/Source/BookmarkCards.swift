@@ -7,9 +7,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate{
     
+    var cards:[NSManagedObject] = []
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var cardsView: UICollectionView!
     
@@ -25,6 +27,14 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
                   button.tintColor = .white
                   button.setImage(UIImage(systemName: "xmark.circle.fill")?.withRenderingMode(.alwaysTemplate), for: .normal)
                 }
+        
+        //Core data
+        readEntries(entity: "CardEntity")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        readEntries(entity: "CardEntity")
+        cardsView.reloadData()
     }
     
     // MARK: Status bar
@@ -34,13 +44,37 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = cardsView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! customCell
+        let card = cards[indexPath.row]
+        
+        cell.lblName.text = card.value(forKey: "name") as! String
+        
+        if card.value(forKey: "url") != nil  {
+            cell.imgCard.load(url: URL(string: (card.value(forKey: "url"))! as! String)!)
+        }
+        
         return cell
     }
+    
+    func readEntries(entity: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CardEntity")
+        
+        do {
+             cards = try managedContext.fetch(fetchRequest)
+                } catch let error as NSError {
+            print("Não foi possível carregar os dados. \(error), \(error.userInfo)")
+            }
+    }
+    
     
     
 }
