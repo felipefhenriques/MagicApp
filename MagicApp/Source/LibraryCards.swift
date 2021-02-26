@@ -12,6 +12,8 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     @IBOutlet weak var cardsView: UICollectionView!
     @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var ActIndicator: UIActivityIndicatorView!
+    
     var library = Cards()
     var cardsVersion = [Card()]
     var response = HTTPURLResponse()
@@ -68,6 +70,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         if library.cards?[indexPath.item].imageUrl != nil {
             cell.imgCard.load(url: URL(string: (library.cards?[indexPath.item].imageUrl)!)!)
         }
+        ActIndicator.stopAnimating()
         return cell
     }
     
@@ -79,6 +82,9 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     // MARK: API REQUESTS
     func getCards(){
+        
+        ActIndicator.startAnimating()
+        
         var request = URLRequest(url: URL(string: "https://api.magicthegathering.io/v1/cards")!)
         request.httpMethod = "GET"
         
