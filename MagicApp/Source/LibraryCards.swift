@@ -133,7 +133,12 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func getCardByVersion(name: String, indexPath: Int){
-        var request = URLRequest(url: URL(string: "https://api.magicthegathering.io/v1/cards?name=%22\(name)%22")!)
+        
+        let urlName = "https://api.magicthegathering.io/v1/cards?name=\(name)"
+        
+        let urlValidString = urlName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        var request = URLRequest(url: URL(string: urlValidString!)!)
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
@@ -141,7 +146,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
             guard let data = data else { return }
             
             do {
-                var cards = try JSONDecoder().decode(Cards.self, from: data)
+                let cards = try JSONDecoder().decode(Cards.self, from: data)
                 self.cardsVersion = cards.cards!
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "infoSegue", sender: indexPath)
