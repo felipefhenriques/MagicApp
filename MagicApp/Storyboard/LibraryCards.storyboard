@@ -35,6 +35,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="AF7-WO-cu2">
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="688"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="X5E-wA-HG6" customClass="customCell" customModule="MagicApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="281"/>
@@ -119,6 +124,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="7yB-3l-De7"/>
                     <navigationItem key="navigationItem" id="UGA-JY-fnf"/>
                     <connections>
+                        <outlet property="ActIndicator" destination="AF7-WO-cu2" id="jlA-Ud-jsv"/>
                         <outlet property="cardsView" destination="FdI-aj-5li" id="q1T-aq-ceP"/>
                         <outlet property="txtName" destination="g9v-n5-duK" id="mkC-jr-TWY"/>
                         <segue destination="aXa-eT-wgc" kind="show" identifier="infoSegue" id="vqU-Sa-9Wu"/>
