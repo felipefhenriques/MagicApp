@@ -43,6 +43,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     
+    // MARK: Collection view
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cards.count
     }
@@ -59,6 +60,8 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         
         return cell
     }
+        
+    // MARK: Core data
     
     func readEntries(entity: String){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
