@@ -18,7 +18,7 @@ class customCell: UICollectionViewCell{
     }
     
     override func prepareForReuse() {
-        imgCard.image = nil
+        imgCard.image = UIImage(named: "Imagenotfound")
     }
 }
 
