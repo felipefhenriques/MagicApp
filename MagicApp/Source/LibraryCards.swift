@@ -10,10 +10,12 @@ import UIKit
 
 class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate{
     
+    
     @IBOutlet weak var cardsView: UICollectionView!
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var ActIndicator: UIActivityIndicatorView!
     
+    var pageCount = 1
     var library = Cards()
     var cardsVersion = [Card()]
     var response = HTTPURLResponse()
@@ -38,7 +40,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         
         //Functionalities
         txtName.delegate = self
-        
+        //btnBackward.isEnabled = false
         
     }
     
@@ -75,6 +77,10 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "infoSegue", sender: indexPath.item)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        return cardsView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath)
     }
     
     
@@ -131,6 +137,54 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     
+    func getPage(page: Int){
+        let urlPage = pageCount + page
+        
+        
+        ActIndicator.startAnimating()
+        
+        var request = URLRequest(url: URL(string: "https://api.magicthegathering.io/v1/cards?page=\(urlPage)")!)
+        request.httpMethod = "GET"
+        
+        URLSession.shared.dataTask(with: request) {(data, response, error) in
+            guard let data = data else { return }
+            
+            do {
+                self.library = try JSONDecoder().decode(Cards.self, from: data)
+                self.response = response as! HTTPURLResponse
+                DispatchQueue.main.async {
+                    self.cardsView.reloadData()
+                }
+                
+            } catch let error as NSError {
+                print("Failed to load: \(error.localizedDescription)")
+            }
+        }.resume()
+        
+        cardsView.setContentOffset(.zero, animated: true)
+        cardsView.reloadData()
+    }
+    
+    // MARK: Pages
+    
+    func pageController()-> Int{
+        let page = response.allHeaderFields["Total-Count"] as? Int
+        return page!/100
+    }
+    
+    @IBAction func fowardPage(_ sender: Any) {
+        getPage(page: +1)
+        pageCount+=1
+    }
+    
+    @IBAction func backwardPage(_ sender: Any) {
+        if pageCount != 1{
+            getPage(page: -1)
+            pageCount-=1
+        }
+    }
+    
+    
     // MARK: Keyboard related
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -146,4 +200,5 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     
     
 }
+
 
