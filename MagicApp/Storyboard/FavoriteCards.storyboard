@@ -121,11 +121,22 @@
                     <connections>
                         <outlet property="cardsView" destination="HY0-rT-Gn7" id="wZQ-mf-e4x"/>
                         <outlet property="txtName" destination="Ds2-LZ-8Dd" id="ROJ-w2-esB"/>
+                        <segue destination="Of2-Lp-v1y" kind="show" identifier="infoSegue" id="ZHl-oF-GFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPh-qr-Gvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1188" y="67"/>
+        </scene>
+        <!--CardInfo-->
+        <scene sceneID="yCB-yu-2VP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CardInfo" id="Of2-Lp-v1y" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QAV-AZ-eLF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XR9-g1-LSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="627"/>
         </scene>
     </scenes>
     <resources>

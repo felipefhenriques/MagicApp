@@ -37,6 +37,14 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         cardsView.reloadData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "infoSegue"{
+            
+            let cardInfo:cardInfo = segue.destination as! cardInfo
+            print(cards[sender as! Int].value(forKey: "idCard"))
+            cardInfo.firstCard = Card(name: cards[sender as! Int].value(forKey: "name") as! String, id: cards[sender as! Int].value(forKey: "idCard") as! String)
+        }
+    }
     // MARK: Status bar
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -60,7 +68,10 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         
         return cell
     }
-        
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "infoSegue", sender: indexPath.item)
+    }
     // MARK: Core data
     
     func readEntries(entity: String){
