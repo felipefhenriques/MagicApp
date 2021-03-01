@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class cardInfo: UIViewController{
+class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //MARK: BTNs
     @IBOutlet weak var btnExit: UIButton!
@@ -26,7 +26,8 @@ class cardInfo: UIViewController{
     @IBOutlet weak var imgCard: UIImageView!
     
     //MARK: TableView
-    @IBOutlet weak var tbvwDetails: UITableView!
+    @IBOutlet weak var tableViewDetails: UITableView!
+    var tbvTitles = ["", "", "", ""]
     
     //MARK: Scroll
     @IBOutlet weak var scrollView: UIScrollView!
@@ -39,13 +40,16 @@ class cardInfo: UIViewController{
     var cardsVersion = [Card()]
     var indexCard:Int!
     var firstCard = Card()
+    var savedCard:Bool!
     
     
-    
+    //MARK: Override
     override func viewDidLoad() {
         scrollView.isHidden = true
         actIndicator.startAnimating()
         getCardByVersion(name: firstCard.name!)
+        tableViewDetails.delegate = self
+        tableViewDetails.dataSource = self
         
 
         //Necessario para o NSManagedObjectContext não retornar nil
@@ -63,6 +67,9 @@ class cardInfo: UIViewController{
         return .lightContent
     }
     
+    
+    
+    //Mark: IBAction
     @IBAction func exitAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -79,8 +86,14 @@ class cardInfo: UIViewController{
         deleteData()
     }
     
+    @IBAction func btnNextAction(_ sender: Any) {
+        changeVersion(1)
+    }
+    @IBAction func btnPrevAction(_ sender: Any) {
+        changeVersion(-1)
+    }
     
-    
+    //MARK: FUNC CoreData
     func saveCard(){
         let entityDescription = NSEntityDescription.entity(forEntityName: "CardEntity", in: self.managedObjContext)
         
@@ -113,12 +126,11 @@ class cardInfo: UIViewController{
             print("Não foi possível carregar os dados. \(error), \(error.userInfo)")
             }
         
-        if cards.count > 0 {
-            for i in 0...cards.count-1{
-                print(cards[i].value(forKey: "name"))
-            }
-        }
+        let index = cards.firstIndex(where: {$0.value(forKey: "idCard") as! String == String(cardsVersion[indexCard].id!)})
         
+        if index != nil {
+            btnSave.setImage(UIImage(systemName: "bookmark.circle.fill"), for: .normal)
+        }
         
         loadItems()
     }
@@ -138,6 +150,8 @@ class cardInfo: UIViewController{
             print ("There was an error")
         }
     }
+    
+    //MARK: FUNC API
     
     func getCardByVersion(name: String){
         
@@ -166,17 +180,68 @@ class cardInfo: UIViewController{
         }.resume()
     }
     
+    //FUNC LoadItems
     func loadItems(){
         lblName.text = cardsVersion[indexCard].name
         lblVersion.text = "\(cardsVersion[indexCard].set ?? "") - \(cardsVersion[indexCard].setName ?? "")"
+        
         if cardsVersion[indexCard].imageUrl != nil {
             self.imgCard.load(url: URL(string: cardsVersion[indexCard].imageUrl!)!)
         }
+        else{
+            self.imgCard.image = UIImage(named: "Imagenotfound")
+        }
         
         lblDescription.text = cardsVersion[indexCard].text
+        
+        tbvTitles[0] = "Mana Cost: \(cardsVersion[indexCard].manaCost ?? "")"
+        
+        tbvTitles[1] = "Type: \(cardsVersion[indexCard].type ?? "")"
+        
+        tbvTitles[2] = "Rarity: \(cardsVersion[indexCard].rarity ?? "")"
+        
+        tbvTitles[3] = "Artist: \(cardsVersion[indexCard].artist ?? "")"
+        
+        
+        
+        if indexCard == 0 {
+            btnPrev.isEnabled = false
+        }
+        else {
+            btnPrev.isEnabled = true
+        }
+        
+        if indexCard == cardsVersion.count - 1{
+            btnNext.isEnabled = false
+        }
+        else{
+            btnNext.isEnabled = true
+        }
+        print(cardsVersion[indexCard].set)
+        tableViewDetails.reloadData()
         actIndicator.stopAnimating()
         scrollView.isHidden = false
     }
+    
+    func changeVersion(_ value: Int){
+        indexCard = indexCard + value
+        loadItems()
+    }
+    
+    //MARK: FUNC TableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tbvTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let newCell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "tbvCell")! as! TableViewCell
+        
+        newCell.lblText.text = "\(tbvTitles[indexPath.item])"
+        
+        return newCell
+    }
+    
     
     
 }

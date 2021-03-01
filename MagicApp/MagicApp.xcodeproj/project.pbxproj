@@ -24,6 +24,7 @@
 		02DD813F25E43EE1006995CA /* MagicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD813E25E43EE1006995CA /* MagicAppTests.swift */; };
 		02DD814A25E43EE2006995CA /* MagicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD814925E43EE2006995CA /* MagicAppUITests.swift */; };
 		8B8BA91B25E598110038D135 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8BA91A25E598110038D135 /* Cards.swift */; };
+		8BD298E325ED60760039625F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD298E225ED60760039625F /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		02DD814925E43EE2006995CA /* MagicAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicAppUITests.swift; sourceTree = "<group>"; };
 		02DD814B25E43EE2006995CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B8BA91A25E598110038D135 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		8BD298E225ED60760039625F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				0250FE1325E57D440016E4EB /* LibraryCards.swift */,
 				0250FE1D25E585100016E4EB /* CardInfo.swift */,
 				0250FE3925E593DA0016E4EB /* BookmarkCards.swift */,
+				8BD298E225ED60760039625F /* TableViewCell.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				02DD812525E43EE1006995CA /* AppDelegate.swift in Sources */,
 				0250FE3A25E593DA0016E4EB /* BookmarkCards.swift in Sources */,
 				02DD812725E43EE1006995CA /* SceneDelegate.swift in Sources */,
+				8BD298E325ED60760039625F /* TableViewCell.swift in Sources */,
 				02DD812F25E43EE1006995CA /* MagicApp.xcdatamodeld in Sources */,
 				0250FE0F25E57D370016E4EB /* CollectionCell.swift in Sources */,
 				8B8BA91B25E598110038D135 /* Cards.swift in Sources */,
