@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -87,6 +86,8 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="275" id="O0e-GD-0zp"/>
                                                 </constraints>
+                                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" red="0.1098634824" green="0.1096463427" blue="0.11764822160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tbvCell" id="3if-eJ-ZPf" customClass="TableViewCell" customModule="MagicApp" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
@@ -99,11 +100,12 @@
                                                                     <rect key="frame" x="20" y="11" width="334" height="21"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" red="0.1098634824" green="0.1096463427" blue="0.11764822160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <connections>
                                                             <outlet property="lblText" destination="Mb8-cM-KFB" id="WD9-GD-WNf"/>
                                                         </connections>
@@ -124,13 +126,14 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opo-lP-WUC">
-                                                <rect key="frame" x="30" y="520" width="354" height="202.5"/>
+                                                <rect key="frame" x="20" y="520" width="374" height="202.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XN-MB-V6p">
-                                                        <rect key="frame" x="20" y="20" width="314" height="162.5"/>
+                                                        <rect key="frame" x="20" y="20" width="334" height="162.5"/>
                                                         <string key="text">Quando Mecanotitão Torrencial entra no campo de batalha, você pode conjurar o card de mágica instantânea alvo do seu cemitério sem pagar seu custo de mana. Quando Mecanotitão Torrencial entra no campo de batalha, você pode conjurar o card de mágica instantânea alvo do seu cemitério sem pagar seu custo de mana. </string>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                        <color key="highlightedColor" systemColor="labelColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                                     </label>
                                                 </subviews>
@@ -144,7 +147,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.markToBounds" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="20"/>
+                                                        <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -171,7 +174,7 @@
                                             <constraint firstItem="bsV-lC-m1q" firstAttribute="top" secondItem="Tu7-CM-gHo" secondAttribute="bottom" constant="157" id="7ub-2N-tBG"/>
                                             <constraint firstAttribute="bottom" secondItem="udp-75-Hg1" secondAttribute="bottom" constant="297" id="9b6-yH-HRv"/>
                                             <constraint firstItem="Dgw-UC-GXf" firstAttribute="top" secondItem="udp-75-Hg1" secondAttribute="bottom" constant="40" id="9gK-iV-3U6"/>
-                                            <constraint firstAttribute="trailing" secondItem="opo-lP-WUC" secondAttribute="trailing" constant="30" id="APe-uc-Dxt"/>
+                                            <constraint firstAttribute="trailing" secondItem="opo-lP-WUC" secondAttribute="trailing" constant="20" id="APe-uc-Dxt"/>
                                             <constraint firstItem="udp-75-Hg1" firstAttribute="top" secondItem="opo-lP-WUC" secondAttribute="bottom" constant="20" id="D6z-lk-rmX"/>
                                             <constraint firstItem="GAm-fY-J2J" firstAttribute="top" secondItem="Tu7-CM-gHo" secondAttribute="bottom" constant="20" id="DW7-L6-3dk"/>
                                             <constraint firstItem="vQu-Y9-DJy" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="30" id="I3p-Eh-heZ"/>
@@ -189,7 +192,7 @@
                                             <constraint firstItem="opo-lP-WUC" firstAttribute="top" secondItem="vQu-Y9-DJy" secondAttribute="bottom" constant="20" id="e7n-Ub-Spx"/>
                                             <constraint firstAttribute="trailing" secondItem="udp-75-Hg1" secondAttribute="trailing" id="f1q-ya-Web"/>
                                             <constraint firstAttribute="trailing" secondItem="Sj5-cV-CGe" secondAttribute="trailing" constant="30" id="iIy-Xw-Cgt"/>
-                                            <constraint firstItem="opo-lP-WUC" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="30" id="j9a-ra-0WK"/>
+                                            <constraint firstItem="opo-lP-WUC" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="20" id="j9a-ra-0WK"/>
                                             <constraint firstItem="udp-75-Hg1" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" id="mWr-UM-JwI"/>
                                             <constraint firstItem="udp-75-Hg1" firstAttribute="top" secondItem="opo-lP-WUC" secondAttribute="bottom" constant="20" id="oKa-tj-hPx"/>
                                             <constraint firstAttribute="trailing" secondItem="Dgw-UC-GXf" secondAttribute="trailing" constant="100" id="qWX-Dy-dA6"/>
@@ -243,8 +246,5 @@
         <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
