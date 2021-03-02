@@ -88,20 +88,20 @@
                                     <rect key="frame" x="0.0" y="281" width="364" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbt-Mb-Mwh">
-                                            <rect key="frame" x="101" y="20" width="60" height="60"/>
+                                        <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbt-Mb-Mwh">
+                                            <rect key="frame" x="113" y="18.5" width="64" height="63"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="nbt-Mb-Mwh" secondAttribute="height" multiplier="60:61" id="4UT-no-4q1"/>
+                                                <constraint firstAttribute="width" constant="64" id="U4N-I9-r8B"/>
                                             </constraints>
                                             <state key="normal" backgroundImage="arrow.backward.circle.fill" catalog="system"/>
                                             <connections>
                                                 <action selector="backwardPage:" destination="N4B-Sj-236" eventType="touchUpInside" id="S8K-WL-wZL"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiU-SS-lVm">
-                                            <rect key="frame" x="203" y="20" width="60" height="60"/>
+                                        <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiU-SS-lVm">
+                                            <rect key="frame" x="188" y="18.5" width="64" height="63"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="oiU-SS-lVm" secondAttribute="height" multiplier="60:61" id="81f-xR-Tj5"/>
+                                                <constraint firstAttribute="width" constant="64" id="0kp-hg-JTg"/>
                                             </constraints>
                                             <state key="normal" backgroundImage="arrow.forward.circle.fill" catalog="system"/>
                                             <connections>
@@ -111,12 +111,12 @@
                                     </subviews>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="leading" secondItem="dGf-qr-jbZ" secondAttribute="leading" constant="101" id="6tZ-Jw-3LR"/>
-                                        <constraint firstAttribute="trailing" secondItem="oiU-SS-lVm" secondAttribute="trailing" constant="101" id="BpT-Wn-tI0"/>
-                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="centerY" secondItem="dGf-qr-jbZ" secondAttribute="centerY" id="g9I-O3-Yv4"/>
-                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="baseline" secondItem="oiU-SS-lVm" secondAttribute="baseline" id="hrM-87-gr7"/>
-                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="top" secondItem="oiU-SS-lVm" secondAttribute="top" id="o4o-df-LJC"/>
-                                        <constraint firstItem="oiU-SS-lVm" firstAttribute="leading" secondItem="nbt-Mb-Mwh" secondAttribute="trailing" constant="42" id="zxo-Yj-InH"/>
+                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="top" secondItem="oiU-SS-lVm" secondAttribute="top" id="5vl-kn-cvV"/>
+                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="centerY" secondItem="dGf-qr-jbZ" secondAttribute="centerY" id="72e-cj-rg7"/>
+                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="top" secondItem="dGf-qr-jbZ" secondAttribute="topMargin" constant="10" id="JYN-0v-Ij4"/>
+                                        <constraint firstItem="oiU-SS-lVm" firstAttribute="leading" secondItem="nbt-Mb-Mwh" secondAttribute="trailing" constant="11" id="U2s-Ms-u7d"/>
+                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="leading" secondItem="dGf-qr-jbZ" secondAttribute="leading" constant="113" id="avx-8m-iTp"/>
+                                        <constraint firstItem="nbt-Mb-Mwh" firstAttribute="baseline" secondItem="oiU-SS-lVm" secondAttribute="baseline" id="cqf-1R-nwB"/>
                                     </constraints>
                                 </collectionReusableView>
                             </collectionView>
@@ -168,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvF-2z-zdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249.27536231884059" y="79.6875"/>
+            <point key="canvasLocation" x="-250.72463768115944" y="79.017857142857139"/>
         </scene>
         <!--CardInfo-->
         <scene sceneID="XV6-Jl-TsY">
