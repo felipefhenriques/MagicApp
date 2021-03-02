@@ -113,18 +113,6 @@
                                                 </prototypes>
                                                 <sections/>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-UC-GXf">
-                                                <rect key="frame" x="100" y="1057.5" width="214" height="85"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal">
-                                                    <imageReference key="image" image="bookmark.circle" catalog="system" symbolScale="medium"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="75" scale="medium" weight="regular"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="saveCard:" destination="sR0-T4-k0X" eventType="touchUpInside" id="ZP4-C7-44I"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opo-lP-WUC">
                                                 <rect key="frame" x="20" y="520" width="374" height="202.5"/>
                                                 <subviews>
@@ -167,17 +155,31 @@
                                                     <action selector="apagarEntradas:" destination="sR0-T4-k0X" eventType="touchUpInside" id="AzJ-21-t90"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-UC-GXf">
+                                                <rect key="frame" x="165" y="1088" width="85" height="85"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="bookmarks_unselected" symbolScale="medium"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="75" scale="medium" weight="regular"/>
+                                                </state>
+                                                <state key="selected" image="bookmarks_selected"/>
+                                                <connections>
+                                                    <action selector="saveCard:" destination="sR0-T4-k0X" eventType="touchUpInside" id="ZP4-C7-44I"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.1803921568627451" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="ct9-Fc-eAU" firstAttribute="top" secondItem="Tu7-CM-gHo" secondAttribute="bottom" constant="157" id="1MJ-oN-rNN"/>
                                             <constraint firstItem="bsV-lC-m1q" firstAttribute="top" secondItem="Tu7-CM-gHo" secondAttribute="bottom" constant="157" id="7ub-2N-tBG"/>
                                             <constraint firstAttribute="bottom" secondItem="udp-75-Hg1" secondAttribute="bottom" constant="297" id="9b6-yH-HRv"/>
-                                            <constraint firstItem="Dgw-UC-GXf" firstAttribute="top" secondItem="udp-75-Hg1" secondAttribute="bottom" constant="40" id="9gK-iV-3U6"/>
+                                            <constraint firstItem="Dgw-UC-GXf" firstAttribute="top" secondItem="udp-75-Hg1" secondAttribute="bottom" constant="70.5" id="9gK-iV-3U6"/>
                                             <constraint firstAttribute="trailing" secondItem="opo-lP-WUC" secondAttribute="trailing" constant="20" id="APe-uc-Dxt"/>
                                             <constraint firstItem="udp-75-Hg1" firstAttribute="top" secondItem="opo-lP-WUC" secondAttribute="bottom" constant="20" id="D6z-lk-rmX"/>
                                             <constraint firstItem="GAm-fY-J2J" firstAttribute="top" secondItem="Tu7-CM-gHo" secondAttribute="bottom" constant="20" id="DW7-L6-3dk"/>
                                             <constraint firstItem="vQu-Y9-DJy" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="30" id="I3p-Eh-heZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dgw-UC-GXf" secondAttribute="bottom" constant="141.5" id="IcG-9D-EIl"/>
                                             <constraint firstAttribute="trailing" secondItem="ct9-Fc-eAU" secondAttribute="trailing" constant="30" id="Io9-9w-ekv"/>
                                             <constraint firstAttribute="trailing" secondItem="GAm-fY-J2J" secondAttribute="trailing" constant="60" id="KLA-ag-M5i"/>
                                             <constraint firstItem="Sj5-cV-CGe" firstAttribute="top" secondItem="f1e-qZ-wrV" secondAttribute="top" constant="42" id="Lj1-iN-MS3"/>
@@ -188,14 +190,14 @@
                                             <constraint firstItem="GAm-fY-J2J" firstAttribute="leading" secondItem="bsV-lC-m1q" secondAttribute="trailing" priority="500" constant="10" id="SGO-p9-0DE"/>
                                             <constraint firstItem="bsV-lC-m1q" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="30" id="SIT-6m-Hu6"/>
                                             <constraint firstItem="ct9-Fc-eAU" firstAttribute="leading" secondItem="GAm-fY-J2J" secondAttribute="trailing" priority="500" constant="20" id="SxO-Jf-oqk"/>
-                                            <constraint firstItem="Dgw-UC-GXf" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="100" id="e3x-ze-CsS"/>
+                                            <constraint firstItem="Dgw-UC-GXf" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="165" id="e3x-ze-CsS"/>
                                             <constraint firstItem="opo-lP-WUC" firstAttribute="top" secondItem="vQu-Y9-DJy" secondAttribute="bottom" constant="20" id="e7n-Ub-Spx"/>
                                             <constraint firstAttribute="trailing" secondItem="udp-75-Hg1" secondAttribute="trailing" id="f1q-ya-Web"/>
                                             <constraint firstAttribute="trailing" secondItem="Sj5-cV-CGe" secondAttribute="trailing" constant="30" id="iIy-Xw-Cgt"/>
                                             <constraint firstItem="opo-lP-WUC" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="20" id="j9a-ra-0WK"/>
                                             <constraint firstItem="udp-75-Hg1" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" id="mWr-UM-JwI"/>
                                             <constraint firstItem="udp-75-Hg1" firstAttribute="top" secondItem="opo-lP-WUC" secondAttribute="bottom" constant="20" id="oKa-tj-hPx"/>
-                                            <constraint firstAttribute="trailing" secondItem="Dgw-UC-GXf" secondAttribute="trailing" constant="100" id="qWX-Dy-dA6"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dgw-UC-GXf" secondAttribute="trailing" constant="164" id="qWX-Dy-dA6"/>
                                             <constraint firstAttribute="trailing" secondItem="vQu-Y9-DJy" secondAttribute="trailing" constant="30" id="r50-do-8Qj"/>
                                             <constraint firstItem="Tu7-CM-gHo" firstAttribute="leading" secondItem="f1e-qZ-wrV" secondAttribute="leading" constant="30" id="t9m-2u-sw8"/>
                                             <constraint firstAttribute="trailing" secondItem="Tu7-CM-gHo" secondAttribute="trailing" constant="30" id="ul2-1J-uch"/>
@@ -242,7 +244,8 @@
     </scenes>
     <resources>
         <image name="Imagenotfound" width="748" height="1069"/>
-        <image name="bookmark.circle" catalog="system" width="128" height="121"/>
+        <image name="bookmarks_selected" width="150" height="150"/>
+        <image name="bookmarks_unselected" width="150" height="150"/>
         <image name="chevron.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>

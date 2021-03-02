@@ -52,7 +52,7 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableViewDetails.dataSource = self
         
 
-        //Necessario para o NSManagedObjectContext não retornar nil
+        //Needed so NSManagedObjectContext doens't return nil
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjContext = appDelegate.persistentContainer.viewContext
         
@@ -75,7 +75,14 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     @IBAction func saveCard(_ sender: Any) {
-        saveCard()
+        if btnSave.isSelected{
+            btnSave.isSelected = false
+            deleteCard(id: cardsVersion[indexCard].id!)
+        } else {
+            btnSave.isSelected = true
+            saveCard()
+        }
+        
     }
     
     @IBAction func printarCarta(_ sender: Any) {
@@ -129,7 +136,7 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
         let index = cards.firstIndex(where: {$0.value(forKey: "idCard") as! String == String(cardsVersion[indexCard].id!)})
         
         if index != nil {
-            btnSave.setImage(UIImage(systemName: "bookmark.circle.fill"), for: .normal)
+            btnSave.isSelected = true
         }
         
         loadItems()
@@ -150,6 +157,29 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
             print ("There was an error")
         }
     }
+    
+    func deleteCard(id: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+          return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "CardEntity")
+        
+        fetchRequest.predicate = NSPredicate(format: "idCard = %@", "\(id)")
+        
+            do {
+                let fetchedResults =  try managedContext.fetch(fetchRequest)
+                for row in fetchedResults {
+                    managedContext.delete(row)
+                    try managedContext.save()
+                }
+            }
+            catch _ {
+                print("Could not delete")
+
+            }
+    }
+    
     
     //MARK: FUNC API
     
