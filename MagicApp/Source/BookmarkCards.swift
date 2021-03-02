@@ -19,7 +19,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         //Collection delegation
         cardsView.delegate = self
         cardsView.dataSource = self
-        
+        txtName.delegate = self
         //Visual
         cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         
@@ -62,6 +62,8 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         
         cell.lblName.text = card.value(forKey: "name") as! String
         
+        
+        
         if card.value(forKey: "url") != nil  {
             cell.imgCard.load(url: URL(string: (card.value(forKey: "url"))! as! String)!)
         }
@@ -87,8 +89,20 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
                 } catch let error as NSError {
             print("Não foi possível carregar os dados. \(error), \(error.userInfo)")
             }
+        
+        
     }
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        if txtName.text == "" {
+            readEntries(entity: "CardEntity")
+        }
+        else {
+            cards = cards.filter{($0.value(forKey: "name") as! String).contains(txtName.text!)}
+        }
+        cardsView.reloadData()
+        return false
+    }
     
 }
