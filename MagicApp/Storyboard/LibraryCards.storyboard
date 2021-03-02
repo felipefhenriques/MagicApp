@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Library-->
         <scene sceneID="V6F-Do-C9d">
             <objects>
                 <viewController storyboardIdentifier="1" modalPresentationStyle="fullScreen" id="N4B-Sj-236" customClass="libraryCards" customModule="MagicApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cartafundo_Prancheta 1" translatesAutoresizingMaskIntoConstraints="NO" id="2gp-t8-AGs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="g9v-n5-duK">
                                 <rect key="frame" x="25" y="120" width="364" height="34"/>
@@ -27,7 +27,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FdI-aj-5li">
-                                <rect key="frame" x="25" y="174" width="364" height="688"/>
+                                <rect key="frame" x="25" y="174" width="364" height="639"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q9K-70-KSK">
                                     <size key="itemSize" width="170" height="281"/>
                                     <size key="estimatedItemSize" width="170" height="281"/>
@@ -36,7 +36,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <activityIndicatorView key="backgroundView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" id="AF7-WO-cu2">
-                                    <rect key="frame" x="0.0" y="0.0" width="364" height="688"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="639"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </activityIndicatorView>
@@ -156,8 +156,9 @@
                             <constraint firstItem="J9Y-DX-Czh" firstAttribute="top" secondItem="8F0-wl-91r" secondAttribute="top" constant="39" id="zJ1-qQ-q6F"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="7yB-3l-De7"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="books.vertical" catalog="system" selectedImage="books.vertical.fill" id="Eps-SL-VD9"/>
                     <navigationItem key="navigationItem" id="UGA-JY-fnf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ActIndicator" destination="AF7-WO-cu2" id="jlA-Ud-jsv"/>
                         <outlet property="cardsView" destination="FdI-aj-5li" id="q1T-aq-ceP"/>
@@ -185,5 +186,7 @@
         <image name="Imagenotfound" width="748" height="1069"/>
         <image name="arrow.backward.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.forward.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="books.vertical" catalog="system" width="128" height="103"/>
+        <image name="books.vertical.fill" catalog="system" width="128" height="100"/>
     </resources>
 </document>

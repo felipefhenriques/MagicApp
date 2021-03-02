@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Favorites-->
         <scene sceneID="Doo-pX-WSx">
             <objects>
                 <viewController storyboardIdentifier="1" modalPresentationStyle="fullScreen" id="c7U-ve-WKd" customClass="bookmarkCads" customModule="MagicApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cartafundo_Prancheta 1" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-C5-p5g">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="362"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HY0-rT-Gn7">
-                                <rect key="frame" x="25" y="174" width="364" height="688"/>
+                                <rect key="frame" x="25" y="174" width="364" height="639"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bew-u2-yvP">
                                     <size key="itemSize" width="170" height="281"/>
                                     <size key="estimatedItemSize" width="170" height="281"/>
@@ -116,8 +116,11 @@
                             <constraint firstItem="Ds2-LZ-8Dd" firstAttribute="top" secondItem="IOq-rG-YWx" secondAttribute="bottom" constant="8" id="zYr-Rq-ast"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tGm-eg-FV5"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="book" catalog="system" selectedImage="book.fill" id="gR3-Pz-fxA">
+                        <color key="badgeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="SWf-Ci-fMo"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardsView" destination="HY0-rT-Gn7" id="wZQ-mf-e4x"/>
                         <outlet property="txtName" destination="Ds2-LZ-8Dd" id="ROJ-w2-esB"/>
@@ -141,5 +144,7 @@
     </scenes>
     <resources>
         <image name="Cartafundo_Prancheta 1" width="428" height="245"/>
+        <image name="book" catalog="system" width="128" height="102"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
     </resources>
 </document>
