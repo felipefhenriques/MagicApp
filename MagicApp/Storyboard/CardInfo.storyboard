@@ -53,6 +53,7 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsV-lC-m1q">
                                                 <rect key="frame" x="30" y="277" width="42" height="41"/>
+                                                <accessibility key="accessibilityConfiguration" label="Previous version"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="chevron.left.circle.fill" catalog="system">
@@ -64,6 +65,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct9-Fc-eAU">
                                                 <rect key="frame" x="342" y="277" width="42" height="41"/>
+                                                <accessibility key="accessibilityConfiguration" label="Next version"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="chevron.right.circle.fill" catalog="system">
@@ -141,6 +143,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-UC-GXf">
                                                 <rect key="frame" x="165" y="1088" width="85" height="85"/>
+                                                <accessibility key="accessibilityConfiguration" label="Save card"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
