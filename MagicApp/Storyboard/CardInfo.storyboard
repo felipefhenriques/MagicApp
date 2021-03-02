@@ -144,6 +144,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-UC-GXf">
                                                 <rect key="frame" x="165" y="1088" width="85" height="85"/>
                                                 <accessibility key="accessibilityConfiguration" label="Save card"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Dgw-UC-GXf" secondAttribute="height" multiplier="1:1" id="RWX-1J-htv"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
