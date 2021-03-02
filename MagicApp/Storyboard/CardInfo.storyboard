@@ -139,22 +139,6 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEg-oG-wmW">
-                                                <rect key="frame" x="95" y="1216" width="57" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Imprimir"/>
-                                                <connections>
-                                                    <action selector="printarCarta:" destination="sR0-T4-k0X" eventType="touchUpInside" id="uUN-MG-u04"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZR-lY-hKb">
-                                                <rect key="frame" x="280" y="1216" width="50" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Apagar"/>
-                                                <connections>
-                                                    <action selector="apagarEntradas:" destination="sR0-T4-k0X" eventType="touchUpInside" id="AzJ-21-t90"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-UC-GXf">
                                                 <rect key="frame" x="165" y="1088" width="85" height="85"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>

@@ -41,8 +41,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         if segue.identifier == "infoSegue"{
             
             let cardInfo:cardInfo = segue.destination as! cardInfo
-            print(cards[sender as! Int].value(forKey: "idCard"))
-            cardInfo.firstCard = Card(name: cards[sender as! Int].value(forKey: "name") as! String, id: cards[sender as! Int].value(forKey: "idCard") as! String)
+            cardInfo.firstCard = Card(name: cards[sender as! Int].value(forKey: "name") as? String, id: cards[sender as! Int].value(forKey: "idCard") as? String)
         }
     }
     // MARK: Status bar
@@ -60,7 +59,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         let cell = cardsView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! customCell
         let card = cards[indexPath.row]
         
-        cell.lblName.text = card.value(forKey: "name") as! String
+        cell.lblName.text = card.value(forKey: "name") as? String
         
         
         

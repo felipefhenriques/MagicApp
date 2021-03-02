@@ -43,13 +43,8 @@ extension UIImageView {
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else { return }
-            
-            do {
-                DispatchQueue.main.async {
-                    self.image = try? UIImage(data: data)
-                }
-            } catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data)
             }
         }.resume()
     }

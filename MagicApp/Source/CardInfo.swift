@@ -247,7 +247,6 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
         else{
             btnNext.isEnabled = true
         }
-        print(cardsVersion[indexCard].set)
         tableViewDetails.reloadData()
         actIndicator.stopAnimating()
         scrollView.isHidden = false
