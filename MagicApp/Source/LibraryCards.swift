@@ -193,11 +193,6 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         return false
     }
     
-    @IBAction func bttLimpar(_ sender: Any) {
-        txtName.text = ""
-        getCards()
-    }
-    
     
 }
 
