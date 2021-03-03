@@ -14,6 +14,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     @IBOutlet weak var cardsView: UICollectionView!
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var ActIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var lblNotFoundCard: UILabel!
     
     var pageCount = 1
     var library = Cards()
@@ -31,6 +32,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         cardsView.dataSource = self
         
         //Visual
+        lblNotFoundCard.isHidden = true
         cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         
         if let button = txtName.value(forKey: "clearButton") as? UIButton {
@@ -100,6 +102,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
                 self.response = response as! HTTPURLResponse
                 DispatchQueue.main.async {
                     self.cardsView.reloadData()
+                    self.notFoudnCard()
                 }
                 
             } catch let error as NSError {
@@ -128,6 +131,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
             self.response = response as! HTTPURLResponse
             DispatchQueue.main.async {
                 self.cardsView.reloadData()
+                self.notFoudnCard()
             }
             
         } catch let error as NSError {
@@ -163,6 +167,17 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         
         cardsView.setContentOffset(.zero, animated: true)
         cardsView.reloadData()
+    }
+    
+    func notFoudnCard(){
+        if self.library.cards?.count == 0 {
+            lblNotFoundCard.isHidden = false
+            cardsView.isHidden = true
+        }
+        else {
+            lblNotFoundCard.isHidden = true
+            cardsView.isHidden = false
+        }
     }
     
     // MARK: Pages

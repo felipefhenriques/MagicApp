@@ -14,6 +14,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
     var cards:[NSManagedObject] = []
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var cardsView: UICollectionView!
+    @IBOutlet weak var lblNotFoundCard: UILabel!
     
     override func viewDidLoad() {
         //Collection delegation
@@ -21,6 +22,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         cardsView.dataSource = self
         txtName.delegate = self
         //Visual
+        lblNotFoundCard.isHidden = true
         cardsView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
         
         if let button = txtName.value(forKey: "clearButton") as? UIButton {
@@ -89,7 +91,12 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
             print("Não foi possível carregar os dados. \(error), \(error.userInfo)")
             }
         
-        
+        if cards.count == 0 {
+            lblNotFoundCard.isHidden = false
+        }
+        else {
+            lblNotFoundCard.isHidden = true
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

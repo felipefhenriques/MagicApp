@@ -120,6 +120,13 @@
                                     </constraints>
                                 </collectionReusableView>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Zc-GL-G9b">
+                                <rect key="frame" x="25" y="412" width="364" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wizards Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnc-eW-Nvy">
                                 <rect key="frame" x="25" y="74" width="244" height="39"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
@@ -162,6 +169,7 @@
                     <connections>
                         <outlet property="ActIndicator" destination="AF7-WO-cu2" id="jlA-Ud-jsv"/>
                         <outlet property="cardsView" destination="FdI-aj-5li" id="q1T-aq-ceP"/>
+                        <outlet property="lblNotFoundCard" destination="3Zc-GL-G9b" id="FNw-xA-dYt"/>
                         <outlet property="txtName" destination="g9v-n5-duK" id="mkC-jr-TWY"/>
                         <segue destination="aXa-eT-wgc" kind="show" identifier="infoSegue" id="vqU-Sa-9Wu"/>
                     </connections>

@@ -92,6 +92,13 @@
                                 <color key="textColor" red="0.65883260970000002" green="0.65880727770000003" blue="0.65882444380000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-Ai-Vwp">
+                                <rect key="frame" x="25" y="384" width="364" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mdI-KD-yLc"/>
                         <color key="backgroundColor" red="0.1803199053" green="0.1686286032" blue="0.1686275005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -123,13 +130,14 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardsView" destination="HY0-rT-Gn7" id="wZQ-mf-e4x"/>
+                        <outlet property="lblNotFoundCard" destination="o3f-Ai-Vwp" id="fbO-pd-5Wm"/>
                         <outlet property="txtName" destination="Ds2-LZ-8Dd" id="ROJ-w2-esB"/>
                         <segue destination="Of2-Lp-v1y" kind="show" identifier="infoSegue" id="ZHl-oF-GFO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPh-qr-Gvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="67"/>
+            <point key="canvasLocation" x="1186.9565217391305" y="66.964285714285708"/>
         </scene>
         <!--CardInfo-->
         <scene sceneID="yCB-yu-2VP">
