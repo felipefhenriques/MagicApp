@@ -42,26 +42,26 @@
                                 </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="X5E-wA-HG6" customClass="customCell" customModule="MagicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="281"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="292"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Ur-K0-sSo">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="281"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="292"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagenotfound" translatesAutoresizingMaskIntoConstraints="NO" id="8ez-VP-pzS">
-                                                    <rect key="frame" x="6" y="55" width="158" height="220"/>
+                                                    <rect key="frame" x="6" y="76" width="158" height="210"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="220" id="X1C-sU-xWU"/>
                                                         <constraint firstAttribute="width" constant="158" id="cux-DE-FOQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7A-NJ-5nd">
-                                                    <rect key="frame" x="8" y="8" width="154" height="39"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7A-NJ-5nd">
+                                                    <rect key="frame" x="8" y="8" width="154" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="154" id="SGk-55-x9f"/>
-                                                        <constraint firstAttribute="height" constant="39" id="mtE-bI-F6K"/>
+                                                        <constraint firstAttribute="height" constant="60" id="mtE-bI-F6K"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -77,7 +77,7 @@
                                                 <constraint firstItem="8ez-VP-pzS" firstAttribute="leading" secondItem="9Ur-K0-sSo" secondAttribute="leading" constant="6" id="wIH-p7-5KW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="170" height="281"/>
+                                        <size key="customSize" width="170" height="292"/>
                                         <connections>
                                             <outlet property="imgCard" destination="8ez-VP-pzS" id="lyd-oJ-1Ou"/>
                                             <outlet property="lblName" destination="Y7A-NJ-5nd" id="baY-Ji-pZt"/>
@@ -85,7 +85,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="dGf-qr-jbZ">
-                                    <rect key="frame" x="0.0" y="281" width="364" height="100"/>
+                                    <rect key="frame" x="0.0" y="292" width="364" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbt-Mb-Mwh">

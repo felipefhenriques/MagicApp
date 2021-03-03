@@ -25,7 +25,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1e-qZ-wrV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1314.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1331"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj5-cV-CGe">
                                                 <rect key="frame" x="342" y="42" width="42" height="41"/>
@@ -39,20 +39,20 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tu7-CM-gHo">
-                                                <rect key="frame" x="30" y="91" width="354" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                <rect key="frame" x="30" y="91" width="354" height="33.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagenotfound" translatesAutoresizingMaskIntoConstraints="NO" id="GAm-fY-J2J">
-                                                <rect key="frame" x="60" y="140" width="294" height="320"/>
+                                                <rect key="frame" x="60" y="144.5" width="294" height="320"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="320" id="7nk-fb-aHu"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsV-lC-m1q">
-                                                <rect key="frame" x="30" y="277" width="42" height="41"/>
+                                                <rect key="frame" x="30" y="281.5" width="42" height="41"/>
                                                 <accessibility key="accessibilityConfiguration" label="Previous version"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +64,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct9-Fc-eAU">
-                                                <rect key="frame" x="342" y="277" width="42" height="41"/>
+                                                <rect key="frame" x="342" y="281.5" width="42" height="41"/>
                                                 <accessibility key="accessibilityConfiguration" label="Next version"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,13 +76,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQu-Y9-DJy">
-                                                <rect key="frame" x="30" y="480" width="354" height="20"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <rect key="frame" x="30" y="484.5" width="354" height="20"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView opaque="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="udp-75-Hg1">
-                                                <rect key="frame" x="0.0" y="742.5" width="414" height="275"/>
+                                                <rect key="frame" x="0.0" y="759" width="414" height="275"/>
                                                 <color key="backgroundColor" red="0.23921568630000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
                                                 <constraints>
@@ -101,7 +101,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb8-cM-KFB">
                                                                     <rect key="frame" x="20" y="11" width="334" height="21"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -116,12 +116,12 @@
                                                 <sections/>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opo-lP-WUC">
-                                                <rect key="frame" x="20" y="520" width="374" height="202.5"/>
+                                                <rect key="frame" x="20" y="524.5" width="374" height="214.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XN-MB-V6p">
-                                                        <rect key="frame" x="20" y="20" width="334" height="162.5"/>
+                                                        <rect key="frame" x="20" y="20" width="334" height="174.5"/>
                                                         <string key="text">Quando Mecanotitão Torrencial entra no campo de batalha, você pode conjurar o card de mágica instantânea alvo do seu cemitério sem pagar seu custo de mana. Quando Mecanotitão Torrencial entra no campo de batalha, você pode conjurar o card de mágica instantânea alvo do seu cemitério sem pagar seu custo de mana. </string>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -142,7 +142,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dgw-UC-GXf">
-                                                <rect key="frame" x="165" y="1088" width="85" height="85"/>
+                                                <rect key="frame" x="165" y="1104.5" width="85" height="85"/>
                                                 <accessibility key="accessibilityConfiguration" label="Save card"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Dgw-UC-GXf" secondAttribute="height" multiplier="1:1" id="RWX-1J-htv"/>
