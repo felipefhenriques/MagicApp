@@ -216,7 +216,7 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
         lblVersion.text = "\(cardsVersion[indexCard].set ?? "") - \(cardsVersion[indexCard].setName ?? "")"
         
         if cardsVersion[indexCard].imageUrl != nil {
-            self.imgCard.load(url: URL(string: cardsVersion[indexCard].imageUrl!)!)
+            //self.imgCard.load(url: URL(string: cardsVersion[indexCard].imageUrl!)!)
         }
         else{
             self.imgCard.image = UIImage(named: "Imagenotfound")

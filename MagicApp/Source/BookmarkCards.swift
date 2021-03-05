@@ -66,7 +66,7 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         
         
         if card.value(forKey: "url") != nil  {
-            cell.imgCard.load(url: URL(string: (card.value(forKey: "url"))! as! String)!)
+            //cell.imgCard.load(url: URL(string: (card.value(forKey: "url"))! as! String)!)
         }
         
         return cell

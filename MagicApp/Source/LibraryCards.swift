@@ -69,9 +69,18 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
         
         cell.lblName.text = library.cards?[indexPath.item].name
         
-        
+        //MARK: Logica de carregar as cartas
         if library.cards?[indexPath.item].imageUrl != nil {
-            cell.imgCard.load(url: URL(string: (library.cards?[indexPath.item].imageUrl)!)!)
+            if self.library.cards?[indexPath.item].image == nil {
+                cell.imgCard.load(url: URL(string: (library.cards?[indexPath.item].imageUrl)!)!) {(data) in
+                    self.library.cards?[indexPath.item].image = data
+                    cell.imgCard.image = UIImage(data: (self.library.cards?[indexPath.item].image)!)
+                }
+            }
+            else{
+                cell.imgCard.image = UIImage(data: (self.library.cards?[indexPath.item].image)!)
+            }
+            
         }
         ActIndicator.stopAnimating()
         return cell

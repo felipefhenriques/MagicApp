@@ -37,14 +37,15 @@ class customCell: UICollectionViewCell{
 //}
 
 extension UIImageView {
-    func load(url: URL) {
+    func load(url: URL, completionHadler: @escaping (_ image: Data) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
         URLSession.shared.dataTask(with: request) {(data, response, error) in
             guard let data = data else { return }
             DispatchQueue.main.async {
-                self.image = UIImage(data: data)
+                completionHadler(data)
+                //self.image = UIImage(data: data)
             }
         }.resume()
     }

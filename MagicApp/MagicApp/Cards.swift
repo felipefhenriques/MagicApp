@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Cards: Codable {
     init() {}
@@ -24,6 +25,7 @@ public struct Card: Codable {
     public var artist: String?
     public var imageUrl: String?
     public var id: String?
+    public var image: Data?
 //    public var names: [String]?
 //    public var cmc: Int?
 //    public var colors: [String]?
