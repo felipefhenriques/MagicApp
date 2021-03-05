@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7U-ve-WKd">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController storyboardIdentifier="1" modalPresentationStyle="fullScreen" id="c7U-ve-WKd" customClass="bookmarkCads" customModule="MagicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6Y-Sz-pnO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cartafundo_Prancheta 1" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-C5-p5g">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HY0-rT-Gn7">
-                                <rect key="frame" x="25" y="174" width="364" height="639"/>
+                                <rect key="frame" x="25" y="174" width="325" height="555"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bew-u2-yvP">
                                     <size key="itemSize" width="170" height="281"/>
                                     <size key="estimatedItemSize" width="170" height="281"/>
@@ -30,7 +30,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="nrf-Ex-ItI" customClass="customCell" customModule="MagicApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="281"/>
+                                        <rect key="frame" x="77.666666666666671" y="0.0" width="170" height="281"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gLT-gv-ffJ">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="281"/>
@@ -74,7 +74,7 @@
                                 </cells>
                             </collectionView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ds2-LZ-8Dd">
-                                <rect key="frame" x="25" y="120" width="364" height="34"/>
+                                <rect key="frame" x="25" y="120" width="325" height="34"/>
                                 <color key="backgroundColor" red="0.15302422639999999" green="0.15272820000000001" blue="0.1647076905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -87,7 +87,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOq-rG-YWx">
-                                <rect key="frame" x="286" y="83" width="103" height="29"/>
+                                <rect key="frame" x="247" y="83" width="103" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" red="0.65883260970000002" green="0.65880727770000003" blue="0.65882444380000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
