@@ -109,6 +109,8 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
         managedObj.setValue(cardsVersion[indexCard].id, forKey: "idCard")
         managedObj.setValue(cardsVersion[indexCard].name, forKey: "name")
         managedObj.setValue(cardsVersion[indexCard].imageUrl, forKey: "url")
+        print(cardsVersion[indexCard].image as Any)
+        managedObj.setValue(cardsVersion[indexCard].image, forKey: "image")
         
         do {
             try managedObjContext.save()

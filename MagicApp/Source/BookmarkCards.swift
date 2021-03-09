@@ -62,12 +62,14 @@ class bookmarkCads: UIViewController, UICollectionViewDelegate, UICollectionView
         let card = cards[indexPath.row]
         
         cell.lblName.text = card.value(forKey: "name") as? String
+        // print(card.value(forKey: "image") as? String)
         
-        
-        
-        if card.value(forKey: "url") != nil  {
-            //cell.imgCard.load(url: URL(string: (card.value(forKey: "url"))! as! String)!)
+        if let imageData = card.value(forKey: "image") as? NSData {
+            if let image = UIImage(data: imageData as Data) {
+                cell.imgCard.image = image
+            }
         }
+        
         
         return cell
     }
