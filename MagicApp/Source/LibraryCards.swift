@@ -20,6 +20,7 @@ class libraryCards: UIViewController, UICollectionViewDelegate, UICollectionView
     var library = Cards()
     var cardsVersion = [Card()]
     var response = HTTPURLResponse()
+    let imageNotFound = UIImage(named: "Imagenotfound")
     
     override func viewDidLoad() {
         super.viewDidLoad()

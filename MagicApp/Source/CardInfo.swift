@@ -41,6 +41,7 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var indexCard:Int!
     var firstCard = Card()
     var savedCard:Bool!
+    var imageNotFound = UIImage(named: "Imagenotfound")
     
     
     //MARK: Override
@@ -219,9 +220,19 @@ class cardInfo: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         if cardsVersion[indexCard].imageUrl != nil {
             //self.imgCard.load(url: URL(string: cardsVersion[indexCard].imageUrl!)!)
+            if cardsVersion[indexCard].image == nil{
+                self.imgCard.load(url: URL(string: cardsVersion[indexCard].imageUrl!)!) {(data) in
+                    self.cardsVersion[self.indexCard].image = data
+                    self.imgCard.image = UIImage(data: data)
+                }
+            }
+            else {
+                self.imgCard.image = UIImage(data: cardsVersion[indexCard].image!)
+                
+            }
         }
         else{
-            self.imgCard.image = UIImage(named: "Imagenotfound")
+            self.imgCard.image = imageNotFound
         }
         
         lblDescription.text = cardsVersion[indexCard].text
