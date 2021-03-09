@@ -50,11 +50,16 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Imagenotfound" translatesAutoresizingMaskIntoConstraints="NO" id="8ez-VP-pzS">
                                                     <rect key="frame" x="6" y="55" width="158" height="220"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="158" id="pez-RF-U9i"/>
+                                                        <constraint firstAttribute="height" constant="220" id="wZI-gu-zmy"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7A-NJ-5nd">
-                                                    <rect key="frame" x="8" y="8" width="154" height="39"/>
+                                                    <rect key="frame" x="6" y="8" width="158" height="39"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="39" id="SMf-q4-r5h"/>
+                                                        <constraint firstAttribute="width" constant="154" id="gPK-Yc-uvp"/>
+                                                        <constraint firstAttribute="height" constant="39" id="jra-tk-g83"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,13 +68,13 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.46030950549999999" green="0.20737838750000001" blue="0.63924968240000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="8ez-VP-pzS" firstAttribute="top" secondItem="Y7A-NJ-5nd" secondAttribute="bottom" constant="8" id="1Xk-5B-aP0"/>
-                                                <constraint firstItem="Y7A-NJ-5nd" firstAttribute="centerX" secondItem="8ez-VP-pzS" secondAttribute="centerX" id="Q0R-xu-TS5"/>
-                                                <constraint firstItem="Y7A-NJ-5nd" firstAttribute="top" secondItem="9Ur-K0-sSo" secondAttribute="topMargin" id="Smf-tU-Ebp"/>
-                                                <constraint firstItem="Y7A-NJ-5nd" firstAttribute="leading" secondItem="9Ur-K0-sSo" secondAttribute="leadingMargin" id="amd-RJ-osy"/>
-                                                <constraint firstItem="8ez-VP-pzS" firstAttribute="leading" secondItem="9Ur-K0-sSo" secondAttribute="leading" constant="6" id="lKa-Ds-DOP"/>
-                                                <constraint firstItem="Y7A-NJ-5nd" firstAttribute="trailing" secondItem="9Ur-K0-sSo" secondAttribute="trailingMargin" id="pMf-hg-7f2"/>
-                                                <constraint firstAttribute="bottom" secondItem="8ez-VP-pzS" secondAttribute="bottom" constant="6" id="qtH-S1-hHA"/>
+                                                <constraint firstItem="8ez-VP-pzS" firstAttribute="leading" secondItem="9Ur-K0-sSo" secondAttribute="leading" constant="6" id="D80-VW-vZY"/>
+                                                <constraint firstAttribute="bottom" secondItem="8ez-VP-pzS" secondAttribute="bottom" constant="6" id="E79-it-Kso"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y7A-NJ-5nd" secondAttribute="trailing" constant="6" id="II9-Ug-8kn"/>
+                                                <constraint firstAttribute="trailing" secondItem="8ez-VP-pzS" secondAttribute="trailing" constant="6" id="SQ7-pB-KPm"/>
+                                                <constraint firstItem="Y7A-NJ-5nd" firstAttribute="top" secondItem="9Ur-K0-sSo" secondAttribute="top" constant="8" id="cpW-I2-AyA"/>
+                                                <constraint firstItem="Y7A-NJ-5nd" firstAttribute="leading" secondItem="9Ur-K0-sSo" secondAttribute="leading" constant="6" id="naf-av-7U3"/>
+                                                <constraint firstItem="8ez-VP-pzS" firstAttribute="top" secondItem="Y7A-NJ-5nd" secondAttribute="bottom" constant="8" id="vhl-oE-rzr"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="170" height="281"/>
