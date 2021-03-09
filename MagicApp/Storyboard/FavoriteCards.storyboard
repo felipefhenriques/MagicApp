@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7U-ve-WKd">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,6 +19,34 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cartafundo_Prancheta 1" translatesAutoresizingMaskIntoConstraints="NO" id="xCk-C5-p5g">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="313"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ds2-LZ-8Dd">
+                                <rect key="frame" x="25" y="120" width="364" height="34"/>
+                                <color key="backgroundColor" red="0.15302422639999999" green="0.15272820000000001" blue="0.1647076905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Wizards Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-BB-Udp">
+                                <rect key="frame" x="25" y="74" width="241" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="250" constant="241" id="PlC-lf-JNF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="300" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="IOq-rG-YWx">
+                                <rect key="frame" x="286" y="83" width="103" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.65883260970000002" green="0.65880727770000003" blue="0.65882444380000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No card marked as favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-Ai-Vwp">
+                                <rect key="frame" x="25" y="384" width="364" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HY0-rT-Gn7">
                                 <rect key="frame" x="25" y="174" width="364" height="639"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bew-u2-yvP">
@@ -73,32 +101,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Ds2-LZ-8Dd">
-                                <rect key="frame" x="25" y="120" width="364" height="34"/>
-                                <color key="backgroundColor" red="0.15302422639999999" green="0.15272820000000001" blue="0.1647076905" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wizards Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-BB-Udp">
-                                <rect key="frame" x="25" y="74" width="244" height="39"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOq-rG-YWx">
-                                <rect key="frame" x="286" y="83" width="103" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" red="0.65883260970000002" green="0.65880727770000003" blue="0.65882444380000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-Ai-Vwp">
-                                <rect key="frame" x="25" y="384" width="364" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mdI-KD-yLc"/>
                         <color key="backgroundColor" red="0.1803199053" green="0.1686286032" blue="0.1686275005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -106,17 +108,21 @@
                             <constraint firstItem="mdI-KD-yLc" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xCk-C5-p5g" secondAttribute="bottom" priority="600" constant="700" id="1tz-Yd-tHp">
                                 <variation key="heightClass=regular" constant="500"/>
                             </constraint>
+                            <constraint firstItem="mdI-KD-yLc" firstAttribute="bottom" secondItem="o3f-Ai-Vwp" secondAttribute="bottom" priority="250" constant="357" id="6Zm-Ub-3hD"/>
+                            <constraint firstItem="mdI-KD-yLc" firstAttribute="trailing" secondItem="o3f-Ai-Vwp" secondAttribute="trailing" constant="25" id="9tg-0D-cBf"/>
                             <constraint firstItem="HY0-rT-Gn7" firstAttribute="top" secondItem="Ds2-LZ-8Dd" secondAttribute="bottom" constant="20" id="DWL-TV-rtU"/>
                             <constraint firstItem="Ds2-LZ-8Dd" firstAttribute="leading" secondItem="mdI-KD-yLc" secondAttribute="leading" constant="25" id="G1n-BC-TAm"/>
                             <constraint firstItem="mdI-KD-yLc" firstAttribute="trailing" secondItem="Ds2-LZ-8Dd" secondAttribute="trailing" constant="25" id="GAW-i1-7L9"/>
                             <constraint firstItem="qV6-BB-Udp" firstAttribute="top" secondItem="mdI-KD-yLc" secondAttribute="top" constant="30" id="MKe-gd-fT0"/>
                             <constraint firstItem="qV6-BB-Udp" firstAttribute="leading" secondItem="mdI-KD-yLc" secondAttribute="leading" constant="25" id="RW9-Nq-adU"/>
+                            <constraint firstItem="o3f-Ai-Vwp" firstAttribute="top" secondItem="mdI-KD-yLc" secondAttribute="top" priority="750" constant="340" id="Rl8-gf-jF1"/>
                             <constraint firstItem="xCk-C5-p5g" firstAttribute="top" secondItem="f6Y-Sz-pnO" secondAttribute="top" id="SBQ-gZ-Zxt"/>
                             <constraint firstItem="HY0-rT-Gn7" firstAttribute="bottom" secondItem="mdI-KD-yLc" secondAttribute="bottom" id="Www-SC-y0R"/>
                             <constraint firstItem="mdI-KD-yLc" firstAttribute="trailing" secondItem="IOq-rG-YWx" secondAttribute="trailing" constant="25" id="aba-Xw-FoX"/>
                             <constraint firstItem="xCk-C5-p5g" firstAttribute="leading" secondItem="f6Y-Sz-pnO" secondAttribute="leading" id="afx-7o-bKh"/>
-                            <constraint firstItem="IOq-rG-YWx" firstAttribute="leading" secondItem="qV6-BB-Udp" secondAttribute="trailing" priority="250" constant="90" id="euq-3O-7nT"/>
+                            <constraint firstItem="IOq-rG-YWx" firstAttribute="leading" secondItem="qV6-BB-Udp" secondAttribute="trailing" constant="20" id="euq-3O-7nT"/>
                             <constraint firstItem="IOq-rG-YWx" firstAttribute="top" secondItem="mdI-KD-yLc" secondAttribute="top" constant="39" id="gjv-EJ-b4C"/>
+                            <constraint firstItem="o3f-Ai-Vwp" firstAttribute="leading" secondItem="mdI-KD-yLc" secondAttribute="leading" constant="25" id="lSN-7c-ZX4"/>
                             <constraint firstItem="mdI-KD-yLc" firstAttribute="trailing" secondItem="HY0-rT-Gn7" secondAttribute="trailing" constant="25" id="lYf-b0-2vr"/>
                             <constraint firstAttribute="trailing" secondItem="xCk-C5-p5g" secondAttribute="trailing" id="nVV-AB-GGz"/>
                             <constraint firstItem="HY0-rT-Gn7" firstAttribute="leading" secondItem="mdI-KD-yLc" secondAttribute="leading" constant="25" id="xDb-ip-8Xv"/>
@@ -137,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPh-qr-Gvy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1186.9565217391305" y="66.964285714285708"/>
+            <point key="canvasLocation" x="1186.8228404099559" y="66.796875"/>
         </scene>
         <!--CardInfo-->
         <scene sceneID="yCB-yu-2VP">
